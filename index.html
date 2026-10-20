@@ -68,7 +68,7 @@ h3{font-size:clamp(20px,2.4vw,26px)}
 @media(max-width:560px){.nav .wrap{height:96px}.nav.solid .wrap{height:78px}.nav.solid .logo img{height:46px}.logo{gap:10px}.logo img{height:56px}.logo span{font-size:15px}.logo i{height:20px}.nav .btn{padding:10px 12px;font-size:10.5px;white-space:nowrap}}
 
 /* hero */
-.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;background:var(--navy-2) url(assets/lago.jpg) center 30%/cover no-repeat;isolation:isolate}
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;background:var(--navy-2) url(assets/hero.jpg) center 55%/cover no-repeat;isolation:isolate}
 .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,32,41,.55) 0%,rgba(10,32,41,.15) 35%,rgba(10,32,41,.85) 100%);z-index:-1}
 .hero .wrap{padding-block:140px 72px}
 .hero h1{font-size:clamp(34px,6vw,78px);max-width:17ch;margin:18px 0 22px}
@@ -211,6 +211,12 @@ footer .legal{font-size:12.5px;color:rgba(255,255,255,.5)}
 .brand b{font-family:var(--serif);font-weight:600;font-size:34px;letter-spacing:.2em}
 .brand small{white-space:nowrap;font-size:10px;letter-spacing:.42em;text-transform:uppercase;margin-top:7px;color:var(--gold)}
 .nav.solid .brand b{font-size:28px}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gi{display:block;aspect-ratio:3/4;overflow:hidden;background:var(--sand-2)}
+.gi img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gi:hover img{transform:scale(1.04)}
+@media(max-width:900px){.gal-grid{grid-template-columns:repeat(2,1fr);gap:8px}}
+@media(prefers-reduced-motion:reduce){.gi img{transition:none}}
 .amen{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 @media(max-width:900px){.amen{grid-template-columns:1fr}}
 .local{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,80px);align-items:center}
@@ -220,6 +226,7 @@ footer .legal{font-size:12.5px;color:rgba(255,255,255,.5)}
 .local .box p{color:rgba(255,255,255,.86)}
 @media(max-width:820px){.local{grid-template-columns:1fr}}
 .hero h1{max-width:19ch}
+.hero .eyebrow{color:#f0c895;text-shadow:0 1px 12px rgba(0,0,0,.7)}
 @media(max-width:560px){.lockup{gap:10px}.sep{height:30px}.brand b{font-size:22px}.brand small{font-size:7.5px!important;letter-spacing:.2em!important}.nav .logo img{height:44px}.brand b{letter-spacing:.14em}} @media(max-width:560px){.brand b{font-size:22px}.brand small{font-size:9px;letter-spacing:.3em}}
 </style>
 </head>
@@ -231,6 +238,7 @@ footer .legal{font-size:12.5px;color:rgba(255,255,255,.5)}
     <ul>
       <li><a href="#lugar">O lugar</a></li>
       <li><a href="#lazer">Lazer</a></li>
+      <li><a href="#galeria">Galeria</a></li>
       <li><a href="#localizacao">Localização</a></li>
     </ul>
     <a class="btn" href="#contato">Falar com um consultor</a>
@@ -282,7 +290,7 @@ footer .legal{font-size:12.5px;color:rgba(255,255,255,.5)}
       <p class="lead">O Lake foi pensado para quem busca qualidade de vida, segurança e liberdade, em um condomínio fechado que reúne lazer completo e a paisagem do litoral norte gaúcho.</p>
     </div>
     <div class="club-feature reveal">
-      <div class="ph"><img src="assets/clube.jpg" alt="Casa de clube em pedra ao entardecer, com iluminação e paisagismo" loading="lazy"></div>
+      <div class="ph"><img src="assets/clube.jpg" alt="Salão do clube com mesas e vista para o lago" loading="lazy"></div>
       <div class="tx">
         <span class="tag">Clube</span>
         <h3>Um clube para receber, descansar e se reunir.</h3>
@@ -290,13 +298,24 @@ footer .legal{font-size:12.5px;color:rgba(255,255,255,.5)}
       </div>
     </div>
     <div class="club-feature reveal">
-      <div class="ph"><img src="assets/rio.jpg" alt="Lago ao pôr do sol, com margens gramadas" loading="lazy"></div>
+      <div class="ph"><img src="assets/agua.jpg" alt="Piscina com borda infinita em frente ao lago" loading="lazy"></div>
       <div class="tx">
         <span class="tag">Água</span>
         <h3>Lagos, prainha e SUP.</h3>
         <p>Mais de 41 mil m² de espelhos d'água desenham a paisagem. Dá para remar de stand up paddle, passar a tarde na prainha ou nadar na piscina com borda infinita.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="galeria" class="gal">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Galeria</span>
+      <h2>O Lake de perto.</h2>
+      <p class="lead">Registros do clube, das piscinas e dos lagos.</p>
+    </div>
+    <div class="gal-grid reveal"><a class="gi" href="assets/g1.jpg" target="_blank" rel="noopener"><img src="assets/g1.jpg" alt="Piscina aquecida coberta com janelas amplas" loading="lazy"></a><a class="gi" href="assets/g2.jpg" target="_blank" rel="noopener"><img src="assets/g2.jpg" alt="Espaço fitness com equipamentos de musculação" loading="lazy"></a><a class="gi" href="assets/g3.jpg" target="_blank" rel="noopener"><img src="assets/g3.jpg" alt="Sala de estar do clube com poltronas e espelhos" loading="lazy"></a><a class="gi" href="assets/g4.jpg" target="_blank" rel="noopener"><img src="assets/g4.jpg" alt="Academia com esteiras e vista para o jardim" loading="lazy"></a><a class="gi" href="assets/g5.jpg" target="_blank" rel="noopener"><img src="assets/g5.jpg" alt="Lago com prainha e jardim" loading="lazy"></a><a class="gi" href="assets/g6.jpg" target="_blank" rel="noopener"><img src="assets/g6.jpg" alt="Deck com mesa e vista para o lago" loading="lazy"></a><a class="gi" href="assets/g7.jpg" target="_blank" rel="noopener"><img src="assets/g7.jpg" alt="Piscina com escada de inox" loading="lazy"></a><a class="gi" href="assets/g8.jpg" target="_blank" rel="noopener"><img src="assets/g8.jpg" alt="Espaço gourmet com mesas e jardim ao fundo" loading="lazy"></a></div>
   </div>
 </section>
 
@@ -365,7 +384,7 @@ footer .legal{font-size:12.5px;color:rgba(255,255,255,.5)}
       <p>Realização: Pulso Empreendimentos.</p>
     </div>
     <div class="legal">
-      <p>Imagens meramente ilustrativas, incluindo renders e fotos de divulgação. Projeto, áreas, prazos e serviços sujeitos a alterações. Valores e condições sob consulta.</p>
+      <p>Imagens do empreendimento, algumas meramente ilustrativas. Projeto, áreas, prazos e serviços sujeitos a alterações. Valores e condições sob consulta.</p>
     </div>
   </div>
 </footer>
