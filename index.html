@@ -64,7 +64,7 @@ h3{font-size:clamp(20px,2.4vw,26px)}
 .nav ul a{color:rgba(255,255,255,.85);text-decoration:none;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
 .nav ul a:hover{color:#fff}
 .nav .btn{padding:11px 20px;font-size:12px}
-@media(max-width:900px){.nav ul{display:none}}
+@media(max-width:1100px){.nav ul{display:none}}
 @media(max-width:560px){.nav .wrap{height:96px}.nav.solid .wrap{height:78px}.nav.solid .logo img{height:46px}.logo{gap:10px}.logo img{height:56px}.logo span{font-size:15px}.logo i{height:20px}.nav .btn{padding:10px 12px;font-size:10.5px;white-space:nowrap}}
 
 /* hero */
@@ -219,6 +219,18 @@ footer .legal{font-size:12.5px;color:rgba(255,255,255,.5)}
 .obras-card h3{font-size:clamp(20px,2.2vw,26px);color:#fff}
 .obras-card p{color:rgba(255,255,255,.8);max-width:46ch}
 @media(max-width:820px){.obras-grid{grid-template-columns:1fr}}
+.ficha-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+.ficha-dl{background:var(--paper);padding:clamp(24px,3.5vw,44px);display:grid;gap:0}
+.ficha-dl>div{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:14px 0;border-top:1px solid rgba(15,46,56,.12)}
+.ficha-dl>div:first-child{border-top:0}
+.ficha-dl dt{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.ficha-dl dd{font-weight:500;color:var(--navy)}
+.ficha-est{background:var(--navy);color:#fff;padding:clamp(24px,3.5vw,44px)}
+.ficha-est h3{color:#fff;margin-bottom:6px}
+.ficha-est>div{padding:16px 0;border-top:1px solid rgba(255,255,255,.12)}
+.ficha-est h4{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:6px}
+.ficha-est p{color:rgba(255,255,255,.82);font-size:15.5px}
+@media(max-width:900px){.ficha-grid{grid-template-columns:minmax(0,1fr)}.ficha-dl>div{grid-template-columns:1fr;gap:2px}}
 .gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .gi{display:block;aspect-ratio:3/4;overflow:hidden;background:var(--sand-2)}
 .gi img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
@@ -249,6 +261,7 @@ footer .legal{font-size:12.5px;color:rgba(255,255,255,.5)}
       <li><a href="#lugar">O lugar</a></li>
       <li><a href="#lazer">Lazer</a></li>
       <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#ficha">Ficha técnica</a></li>
       <li><a href="#localizacao">Localização</a></li>
     </ul>
     <a class="btn" href="#contato">Falar com um consultor</a>
@@ -357,6 +370,20 @@ footer .legal{font-size:12.5px;color:rgba(255,255,255,.5)}
       <div class="club-card reveal"><h3>Água</h3><p class="area">Piscinas e lagos</p><ul><li>Piscina com borda infinita</li><li>Piscina aquecida coberta</li><li>Piscina infantil</li><li>Prainha</li><li>Lagos para prática de SUP</li></ul></div>
       <div class="club-card reveal"><h3>Esporte</h3><p class="area">Quadras e pistas</p><ul><li>Quadra de tênis coberta</li><li>Quadras de vôlei, bocha e poliesportiva</li><li>Futebol society e mini futebol</li><li>Pista de skate bowl</li><li>Estação de alongamento</li></ul></div>
       <div class="club-card reveal"><h3>Bem-estar e convivência</h3><p class="area">Espaços para ficar</p><ul><li>Espaço fitness</li><li>Espaço zen e de leitura</li><li>Clube social e salão de festas</li><li>Espaço pet e parque infantil</li><li>Fire pit e alameda</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="clubs ficha" id="ficha">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Ficha técnica</span>
+      <h2>Todas as características do Lake.</h2>
+      <p class="lead">Os dados do empreendimento e tudo o que o condomínio oferece, em um só lugar.</p>
+    </div>
+    <div class="ficha-grid reveal">
+      <dl class="ficha-dl"><div><dt>Empreendimento</dt><dd>LAKE Condomínio Resort</dd></div><div><dt>Tipo</dt><dd>Condomínio fechado de lotes, com estrutura de resort</dd></div><div><dt>Situação</dt><dd>100% pronto, com várias casas em construção</dd></div><div><dt>Lotes</dt><dd>A partir de 360 m²</dd></div><div><dt>Espelhos d'água</dt><dd>Mais de 41 mil m²</dd></div><div><dt>Área comum</dt><dd>5 mil m²</dd></div><div><dt>Segurança</dt><dd>Portaria 24h e cerca elétrica</dd></div><div><dt>Endereço</dt><dd>Estrada dos Cunhas, 2310, Itapeva, Torres, RS</dd></div><div><dt>Distância</dt><dd>Cerca de 15 minutos do centro de Torres</dd></div><div><dt>Realização</dt><dd>Pulso Empreendimentos</dd></div><div><dt>Vendas oficiais</dt><dd>Vox Imobiliária, CRECI 15540</dd></div></dl>
+      <div class="ficha-est"><h3>Estrutura de lazer</h3><div><h4>Clube</h4><p>Clube social e salão de festas, espaço gourmet com churrasqueira, sala fitness, sala de jogos.</p></div><div><h4>Água</h4><p>Piscina com borda infinita, piscina aquecida coberta, piscina infantil, prainha, lagos para SUP.</p></div><div><h4>Esporte</h4><p>Quadra de tênis coberta, quadras de vôlei, bocha e poliesportiva, futebol society e mini futebol, pista de skate bowl, estação de alongamento.</p></div><div><h4>Bem-estar</h4><p>Espaço fitness, espaço zen e de leitura, espaço pet, parque infantil, fire pit e alameda.</p></div></div>
     </div>
   </div>
 </section>
