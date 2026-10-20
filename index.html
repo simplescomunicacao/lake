@@ -105,7 +105,6 @@ section{padding-block:clamp(72px,10vw,130px)}
 /* video */
 .film{background:var(--navy-2);color:#fff}
 .film .head p{color:rgba(255,255,255,.72)}
-.film video{display:block;width:100%;max-width:calc(78vh * 16 / 9);height:auto;aspect-ratio:16/9;margin-inline:auto;background:#000;border:1px solid rgba(255,255,255,.12)}
 
 /* clubs */
 .clubs{background:var(--sand-2)}
@@ -242,8 +241,8 @@ footer .legal{font-size:12.5px;color:rgba(255,255,255,.5)}
 .film{background:var(--navy-2);color:#fff}
 .film .head h2{color:#fff}
 .film .lead{color:rgba(255,255,255,.78)}
-.film-box{margin-top:8px;background:#000;aspect-ratio:16/9;box-shadow:0 20px 60px rgba(0,0,0,.35)}
-.film-box video{display:block;width:100%;height:100%;object-fit:cover}
+.film-box{margin:8px auto 0;width:min(100%,calc(82vh * 16 / 9));line-height:0;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.film-box video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:transparent;border:0}
 .map{margin-top:clamp(28px,4vw,48px)}
 .map iframe{display:block;width:100%;height:clamp(300px,42vw,460px);border:0;background:var(--sand)}
 .map-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
