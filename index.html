@@ -239,6 +239,16 @@ footer .legal{font-size:12.5px;color:rgba(255,255,255,.5)}
 @media(prefers-reduced-motion:reduce){.gi img{transition:none}}
 .amen{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 @media(max-width:900px){.amen{grid-template-columns:1fr}}
+.film{background:var(--navy-2);color:#fff}
+.film .head h2{color:#fff}
+.film .lead{color:rgba(255,255,255,.78)}
+.film-box{margin-top:8px;background:#000;aspect-ratio:16/9;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.film-box video{display:block;width:100%;height:100%;object-fit:cover}
+.map{margin-top:clamp(28px,4vw,48px)}
+.map iframe{display:block;width:100%;height:clamp(300px,42vw,460px);border:0;background:var(--sand)}
+.map-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+.btn.ghost.dark{color:var(--navy);border:1px solid rgba(15,46,56,.4);background:transparent}
+.btn.ghost.dark:hover{background:rgba(15,46,56,.06)}
 .local{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,80px);align-items:center}
 .local .box{padding:clamp(28px,4vw,48px);background:var(--navy);color:#fff}
 .local .box b{display:block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:8px}
@@ -292,6 +302,21 @@ footer .legal{font-size:12.5px;color:rgba(255,255,255,.5)}
     <div class="num"><strong>15 min</strong><span>do centro de Torres</span></div>
   </div>
 </div>
+
+<section class="film" id="video">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Veja o Lake</span>
+      <h2>Do portão ao lago, um passeio pelo condomínio.</h2>
+      <p class="lead">O vídeo começa pela entrada, com portaria 24h, e percorre as piscinas, o clube, a academia e os lagos.</p>
+    </div>
+    <div class="film-box reveal">
+      <video id="lakeVideo" controls muted loop playsinline preload="metadata" poster="assets/lake-poster.jpg" aria-label="Vídeo do LAKE Condomínio Resort, da entrada às áreas de lazer">
+        <source src="assets/lake.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
 
 <section class="devs" id="realizacao">
   <div class="wrap">
@@ -389,7 +414,7 @@ footer .legal{font-size:12.5px;color:rgba(255,255,255,.5)}
 </section>
 
 <section class="clubs" id="localizacao">
-  <div class="wrap local">
+  <div class="wrap"><div class="local">
     <div class="reveal">
       <span class="eyebrow">Localização</span>
       <h2 style="margin:14px 0 20px">Itapeva, entre a praia e o centro de Torres.</h2>
@@ -400,6 +425,13 @@ footer .legal{font-size:12.5px;color:rgba(255,255,255,.5)}
       <p>Estrada dos Cunhas, 2310<br>Itapeva, Torres, RS</p>
       <b>Segurança</b>
       <p>Condomínio fechado, portaria 24h e cerca elétrica.</p>
+    </div>
+    <div class="map reveal">
+      <iframe title="Mapa com a localização do LAKE Condomínio Resort" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Estrada+dos+Cunhas,+2310,+Itapeva,+Torres,+RS&amp;hl=pt-BR&amp;z=14&amp;output=embed"></iframe>
+      <div class="map-cta">
+        <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Estrada+dos+Cunhas,+2310,+Itapeva,+Torres,+RS" target="_blank" rel="noopener">Como chegar</a>
+        <a class="btn ghost dark" href="https://www.google.com/maps/search/?api=1&amp;query=Estrada+dos+Cunhas,+2310,+Itapeva,+Torres,+RS" target="_blank" rel="noopener">Abrir no Google Maps</a>
+      </div>
     </div>
   </div>
 </section>
@@ -532,6 +564,10 @@ form.addEventListener("submit", async ev => {
   document.getElementById("ck-yes").onclick=function(){set("yes");box.hidden=true;loadRD()};
   document.getElementById("ck-no").onclick=function(){set("no");box.hidden=true};
 })();
+
+  (function(){var v=document.getElementById("lakeVideo");if(!v||!("IntersectionObserver" in window))return;
+    var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if(reduce)return;var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){});}else{v.pause();}});},{threshold:.45});io.observe(v);})();
 </script>
 </body>
 </html>
